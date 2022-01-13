@@ -46,7 +46,7 @@ console.log(listLiRefs);
 ingredientsRef.append(...listLiRefs);
 
 
-//--------Альтернативный вариант innerHTML----------
+//--------Альтернативный вариант insertAdjacentHTML----------
 // const ingredients = [
 //   'Potatoes',
 //   'Mushrooms',
