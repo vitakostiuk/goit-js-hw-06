@@ -35,7 +35,7 @@ console.log(galleryRef);
 
 const listLiMarkup = images.map(
   image => `
-  <li class="item">
+  <li class="item-galary">
     <img src="${image.url}" alt="${image.alt}">
     </img>
   </li>
