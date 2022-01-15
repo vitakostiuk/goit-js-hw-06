@@ -40,6 +40,7 @@ function onFormSubmit(event) {
 
   if (email.value === '' || password.value === '') {
     alert('Все поля должны быть заполнены');
+    return;
   } 
 
   const formData = {
