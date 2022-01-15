@@ -49,20 +49,20 @@ function getAmountOfBoxes() {
 
 refs.createBtn.addEventListener('click', createBoxes);
 
-function createBoxes() {
+function createBoxes(amount) {
+  amount = getAmountOfBoxes();
+  console.log(amount);
   let sizeOfBlock = 30;
   const arrFromBoxes = [];
 
-  for (let i = 1; i <= 100; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
     const newTagDiv = document.createElement('div');
-    // newTagDiv.classList.add('box');
     newTagDiv.style.cssText = `width: ${sizeOfBlock}px; height: ${sizeOfBlock}px`;
     arrFromBoxes.push(newTagDiv);
     sizeOfBlock += 10;
 
     newTagDiv.style.backgroundColor = getRandomHexColor();
 
-    console.log(newTagDiv);
     console.log(arrFromBoxes);
     refs.boxes.append(newTagDiv);
   }
@@ -72,7 +72,10 @@ function createBoxes() {
 refs.destroyBtn.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
-  refs.boxes.remove();
+  refs.inputNumber.value = '';
+
+  const newBoxes = document.getElementById('boxes');
+  newBoxes.innerHTML = '';
 }
 
 
